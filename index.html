@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Compiladores y Lenguajes</title>
+    <style>
+        /* Estilos CSS para centrar y justificar */
+        body {
+            text-align: justify; /* Justificar los párrafos */
+        }
+
+        h1 {
+            text-align: center; /* Centrar los títulos y párrafos */
+            font-size: 25px; /* Tamaño de letra del título principal (ajusta según tus preferencias) */
+            margin-left: 40px; /* Ajusta el margen izquierdo a tu preferencia */
+            margin-right: 40px; /* Ajusta el margen derecho a tu preferencia */
+        }
+
+        h2 {
+            text-align: left; /* Alinea los subtítulos a la izquierda */
+            /*font-size: 24px; Tamaño de letra de los subtítulos (ajusta según tus preferencias) */
+        }
+
+        p {
+            /*text-align: left; Alinear el texto a la izquierda */
+            text-justify: auto; /* Justificar el texto automáticamente */
+            margin-left: 150px; /* Ajusta el margen izquierdo a tu preferencia */
+            margin-right: 150px; /* Ajusta el margen derecho a tu preferencia */
+            font-size: 18px;
+        }
+
+        .parrafo2 {
+            /*text-align: left; Alinear el texto a la izquierda */
+            text-justify: auto; /* Justificar el texto automáticamente */
+            margin-left: 170px; /* Ajusta el margen izquierdo a tu preferencia */
+            margin-right: 150px; /* Ajusta el margen derecho a tu preferencia */
+            font-size: 18px;
+        }
+
+        .parrafo3 {
+            /*text-align: left; Alinear el texto a la izquierda */
+            text-justify: auto; /* Justificar el texto automáticamente */
+            margin-left: 190px; /* Ajusta el margen izquierdo a tu preferencia */
+            margin-right: 170px; /* Ajusta el margen derecho a tu preferencia */
+            font-size: 18px;
+        }
+
+        img {
+            display: block; /* Para centrar la imagen horizontalmente */
+            margin: 0 auto; /* Para centrar la imagen horizontalmente */
+            /*width: 30%;  Cambia el tamaño de las imágenes según tus preferencias */
+        }
+
+        /* Estilo para los subtítulos en la parte izquierda */
+        .subtitulo {
+            text-align: left; /* Alinea el texto a la izquierda */
+            /*font-weight: normal;  Reduce la negrita */
+            margin-left: 150px; /* Ajusta el margen izquierdo a tu preferencia */
+            font-size: 20px; /* Tamaño de letra de los subtítulos (ajusta según tus preferencias) */
+            
+        }
+
+        .subtitulo1 {
+            text-align: left; /* Alinea el texto a la izquierda */
+            /*font-weight: normal;  Reduce la negrita */
+            margin-left: 170px; /* Ajusta el margen izquierdo a tu preferencia */
+            font-size: 20px; /* Tamaño de letra de los subtítulos (ajusta según tus preferencias) */
+            
+        }
+
+        .subtitulo2 {
+            text-align: left; /* Alinea el texto a la izquierda */
+            /*font-weight: normal;  Reduce la negrita */
+            margin-left: 190px; /* Ajusta el margen izquierdo a tu preferencia */
+            font-size: 20px; /* Tamaño de letra de los subtítulos (ajusta según tus preferencias) */
+            
+        }
+
+        /* Estilo para la lista con viñetas */
+        .subtitulo + ul {
+            list-style: disc; /* Establece viñetas (puntos) */
+            margin-left: 190px; /* Ajusta el margen izquierdo de la lista a tu preferencia */
+            padding-left: 0; /* Elimina el relleno izquierdo predeterminado de la lista */
+            font-size: 16px; /* Tamaño de letra de los subtítulos (ajusta según tus preferencias) */
+        }
+
+        .subtitulo + ol {
+            list-style-type: decimal; /* Establece números como viñetas */
+            margin-left: 20px; /* Ajusta el margen izquierdo de la lista a tu preferencia */
+            padding-left: 0; /* Elimina el relleno izquierdo predeterminado de la lista */
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Compiladores y Lenguajes</h1>
+
+    <h2 class="subtitulo">¿Qué es un compilador?</h2>
+    <p>Es un programa que traduce código fuente a lenguaje de máquina, es decir, traduce un programa escrito
+         en un lenguaje de programación de alto nivel (C / C ++, COBOL, etc.) en lenguaje de máquina. 
+         Un compilador generalmente genera lenguaje ensamblador primero y luego traduce el lenguaje ensamblador 
+        al lenguaje máquina.
+    </p>
+
+    <img src="https://tech.tribalyte.eu/wp-content/uploads/2018/07/640px-Basic_Idea_of_a_Compiler-min.png" 
+    alt="Compilador" width="500" height="350" title="Compilador">
+
+    <h2 class="subtitulo">Historia</h2>
+    <p>El término «compilador» fue acuñado a principios de 1950 por Grace Murray Hopper. La traducción fue 
+        vista entonces como la «compilación» de una secuencia de rutinas seleccionadas. Grace Brewster Murray 
+        Hopper fue una científica informática estadounidense y contraalmirante de la Marina de los Estados 
+        Unidos. Una de las primeras programadoras de la computadora Harvard Mark I, fue una pionera en 
+        programación que inventó una de las primeras herramientas relacionadas con el compilador. Ella 
+        popularizó la idea de los lenguajes de programación independientes de la máquina, lo que condujo 
+        al desarrollo de COBOL, un lenguaje de programación de alto nivel que todavía se usa en la actualidad.
+        El primer compilador del lenguaje de alto nivel FORTRAN se desarrolló entre 1954 y 1957 en IBM por 
+        un grupo dirigido por John Backus.
+    </p>
+    <img src="https://www.nobbot.com/wp-content/uploads/2019/05/grace-hopper.jpg" 
+    alt="Primer compilador" width="450" height="400" title="Primer compilador">
+
+    <h2 class="subtitulo">Estructura de un Compilador</h2>
+    <h2 class="subtitulo1">1. Análisis Léxico</h2>
+    <p class="parrafo2">Es la primera fase de un compilador, consistente en un programa que recibe como entrada el código 
+        fuente de otro programa (secuencia de caracteres) y produce una salida compuesta de tokens (componentes
+         léxicos) o símbolos. Estos tokens sirven para una posterior etapa del proceso de traducción, siendo 
+         la entrada para el analizador sintáctico.
+    </p>
+    <img src="https://4.bp.blogspot.com/-Y5eCIo35d0Y/WKuYGCEkZDI/AAAAAAAADA0/oECFNKfZiX4oJHb1ovD4tl8-rTlK1D56gCLcB/s1600/analizadorlexico.jpg" 
+    alt="Análisis Léxico" width="450" height="400" title="Análisis Léxico"> 
+
+    <h2 class="subtitulo2">Funciones:</h2>
+    <p class="parrafo3">Es la primera fase de un compilador, consistente en un programa que recibe como entrada el código 
+        fuente de otro programa (secuencia de caracteres) y produce una salida compuesta de tokens (componentes
+         léxicos) o símbolos. Estos tokens sirven para una posterior etapa del proceso de traducción, siendo 
+         la entrada para el analizador sintáctico. 
+    </p>
+    <ul class="parrafo3">
+        <li>Se simplifica el diseño, puesto que hay una herramienta especializada en el tratamiento del 
+            fichero que contiene el código fuente</li>
+        <li>Aumenta la portabilidad del compilador, pudiendo tenerse versiones diferentes para distintos 
+            formatos del texto de código fuente (ASCII, EBCDIC, etc.).</li>
+        <li>Mejora la eficiencia al ser una herramienta especializada en el tratamiento de caracteres.</li>
+    </ul>
+
+    <h2 class="subtitulo2">¿Qué es un token? </h2>
+    <p class="parrafo3">Es una agrupación de caracteres reconocidos por el analizador léxico que constituyen los símbolos con 
+        los que se forman las sentencias del lenguaje. Lo que el analizador léxico devuelve al analizador 
+        sintáctico es el nombre de ese símbolo junto con el valor del atributo.
+        Si observamos con más detalle lo que pasa en el analizador léxico, en su relación con el analizador 
+        sintáctico y con la tabla de símbolos, vemos que una vez empieza a leer el código fuente y reconoce 
+        el primer token, se lo envía al analizador sintáctico y este, en cuanto lo recibe, le pide el 
+        siguiente token para que siga reconociendo la entrada. Por tanto, los tokens son enviados al analizador
+         sintáctico bajo demanda.
+    </p>
+
+    <h2 class="subtitulo2">Definiciones básicas</h2>
+    <ul class="parrafo2">
+        <li>Token: Constituyen los símbolos terminales de la gramática: Palabras reservadas. Identificadores. 
+            Operadores y constantes. Símbolos de puntuación y especiales.
+        </li>
+        <li>Lexema:  Es la secuencia de caracteres, ya agrupados, que coinciden con un determinado token, como 
+            por ejemplo el nombre de un identificador, o el valor de un número. Un token puede tener uno o 
+            infinitos lexemas. Por ejemplo, las palabras reservadas tienen un solo lexema, mientras que los 
+            identificadores o los números tienen infinitos.
+        </li>
+        <li>Patrón: Es la forma de describir los tipos de lexema. Esto se realiza utilizando expresiones 
+            regulares.
+        </li>
+    </ul>
+
+    <img src="https://slideplayer.es/slide/1627362/6/images/9/Token%2C+Patrones+y+Lexemas.jpg" 
+    alt="Tokens Patrones y Lexemas" width="450" height="400" title="Tokens Patrones y Lexemas"> 
+
+    <h2 class="subtitulo1">2. Análisis Semántico </h2>
+    <p class="parrafo2">El análisis semántico se asegura de que las declaraciones y declaraciones del programa sean 
+        semánticamente correctas. Es una colección de procedimientos que el analizador llama cuando lo requiere
+         la gramática. Tanto el árbol de sintaxis de la fase anterior como la tabla de símbolos se utilizan 
+         para comprobar la coherencia del código dado. La verificación de tipos es una parte importante del 
+         análisis semántico donde el compilador se asegura de que cada operador tenga operandos coincidentes.
+    </p>
+    <h2 class="subtitulo2">Analizador semántico </h2>
+    <p class="parrafo3">utiliza el árbol de sintaxis y la tabla de símbolos para verificar si el programa dado es 
+        semánticamente consistente con la definición del lenguaje. Reúne información de tipos y la almacena en
+         el árbol de sintaxis o en la tabla de símbolos. Esta información de tipo es utilizada posteriormente 
+         por el compilador durante la generación de código intermedio.
+    </p>
+    <h2 class="subtitulo2">Funciones del Análisis Semántico</h2>
+    <p class="parrafo3">1. Comprobación de tipos:
+        garantiza que los tipos de datos se utilicen de forma coherente con su definición.
+        2. Comprobación de etiquetas:
+        un programa debe contener referencias de etiquetas.
+        3. Verificación de control de flujo:
+        mantiene una verificación de que las estructuras de control se usan de manera adecuada 
+        (ejemplo: sin declaración de interrupción fuera de un ciclo)
+    </p>
+
+    <img src="https://images.jifo.co/69592295_1600373774635.png" 
+    alt="Análisis Semántico" width="500" height="200" title="Análisis Semántico"> 
+
+    <h2 class="subtitulo">ATS</h2>
+    <p>un árbol de sintaxis abstracta (AST), o simplemente un árbol de sintaxis, es una representación 
+        de árbol de la estructura sintáctica simplificada del código fuente escrito en cierto lenguaje de 
+        programación. Cada nodo del árbol denota una construcción que ocurre en el código fuente. La sintaxis 
+        es abstracta en el sentido que no representa cada detalle que aparezca en la sintaxis verdadera. 
+        Por ejemplo, el agrupamiento de los paréntesis está implícito en la estructura arborescente, y una 
+        construcción sintáctica tal como IF condición THEN puede ser denotada por un solo nodo con dos ramas.
+    </p>
+    <img src="https://www.researchgate.net/publication/282074621/figure/fig1/AS:669535715737601@1536641162060/Figura-2-Arbol-sintactico-generado-para-la-sentencia-321-32.png" 
+    alt="ATS" width="350" height="400" title="ATS"> 
+
+    <h2 class="subtitulo">Automatas finitos</h2>
+    <p>Un autómata finito (AF) o máquina de estado finito es un modelo computacional que realiza cómputos en 
+        forma automática sobre una entrada para producir una salida.
+        Este modelo está conformado por un alfabeto, un conjunto de estados finito, una función de transición, 
+        un estado inicial y un conjunto de estados finales. Su funcionamiento se basa en una función de 
+        transición, que recibe a partir de un estado inicial una cadena de caracteres pertenecientes al 
+        alfabeto (la entrada), y que va leyendo dicha cadena a medida que el autómata se desplaza de un estado
+         a otro, para finalmente detenerse en un estado final o de aceptación, que representa la salida.
+    </p>
+    <h2 class="subtitulo1">Definición formal</h2>
+    <p class="parrafo2">Formalmente, un autómata finito es una 5-tupla (Q, Σ, q0, δ, F) donde:
+    </p>
+    <ul class="parrafo2">
+        <li>Q es un conjunto finito de estados;</li>
+        <li>Σ es un alfabeto finito;</li>
+        <li>q0  es el estado inicial;</li>
+        <li>δ es una función de transición;</li>
+        <li>F es un conjunto de estados finales o de aceptación.</li>
+    </ul>
+    <h2 class="subtitulo1">Autómata finito determinista</h2>
+    <p class="parrafo2">Un autómata finito determinista (abreviado AFD) es un autómata finito que además es un sistema 
+        determinista; es decir, para cada estado en que se encuentre el autómata, y con cualquier símbolo del 
+        alfabeto leído, existe siempre no más de una transición posible desde ese estado y con ese símbolo.
+    </p>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/0/01/Buechie01.PNG" 
+    alt="AFND" width="450" height="200" title="AFND"> 
+
+    <h2 class="subtitulo1">Autómata finito no determinista</h2>
+    <p class="parrafo2">Un autómata finito no determinista (abreviado AFND) es un autómata finito que, a diferencia de los 
+        autómatas finitos deterministas (AFD), posee al menos un estado q ∈ Q, tal que para un símbolo 
+        a ∈ Σ del alfabeto, existe más de una transición δ(q,a) posible. Todo AFND puede ser convertido en 
+        un AFD equivalente.
+    </p>
+    <img src="https://www.luzem.com/wp-content/uploads/2010/03/AFND_Base.png" 
+    alt="AFND" width="450" height="200" title="AFND"> 
+
+    <h2 class="subtitulo1">Realizado por:</h2>
+    <h2 class="subtitulo1">Brandon Oña y Darwin Guachamin</h2>
+ 
+    <script>
+    </script>
+</body>
+</html>
